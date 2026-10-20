@@ -13,10 +13,11 @@ const CUA_BROWSER_TOOLS = [
   'mcp__cua-driver-mcp__browser_dialog',
 ]
 
+/** An entry without a config block validates as `{}`, so the defaults apply. */
 export const Config = z.object({
   /** Model-facing tool names whose `structuredContent` is appended to the text the model sees. */
   tools: z.array(z.string().min(1)).default(CUA_BROWSER_TOOLS),
-})
+}).prefault({})
 
 /**
  * The dsh MCP bridge keeps an MCP result's `structuredContent` on the tool
