@@ -1,0 +1,17 @@
+{
+  "name": "dsh-mcp-structured-content",
+  "version": "0.1.0",
+  "description": "Show the structuredContent of selected MCP tools to the model in dsh, so ids returned only there become usable",
+  "type": "module",
+  "main": "index.js",
+  "exports": { ".": "./index.js", "./package.json": "./package.json" },
+  "files": ["index.js", "cordis.patch.yml"],
+  "license": "MIT",
+  "author": "Yanzuo Lu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YanzuoLu/dsh-mcp-structured-content.git"
+  },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "peerDependencies": { "zod": "^4.0.0" }
+}
